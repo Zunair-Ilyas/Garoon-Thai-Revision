@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
+import easyGoThaiImage from '../assets/EasyGoThai_Shopfront.jpg'
 
 const EasyGoThai = () => {
   const address = "277 Mount Maunganui Rd, Mount Maunganui, Tauranga 3116";
@@ -23,7 +24,8 @@ const EasyGoThai = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-primary">Easy Go Thai</h1>
               <p className="text-lg text-muted-foreground mb-6">
-                Authentic Thai cuisine at the beach. For menus, ordering, and reservations, visit the official site.
+                Easy Go Thai restaurant is located in the main area of Mount Maunganui and open 7 days a week from lunchtime to late.
+                We are BYO and fully licensed and offer exceptional service and great Thai food for dine-in, takeaways , and delivery.
               </p>
 
               <div className="space-y-3 mb-6">
@@ -43,7 +45,7 @@ const EasyGoThai = () => {
             </div>
 
             <div className="animate-scale-in">
-              <img src={restaurantImage} alt="Easy Go Thai interior" className="rounded-lg shadow-lg w-full h-[380px] md:h-[460px] object-cover" />
+              <img src={easyGoThaiImage} alt="Easy Go Thai interior" className="rounded-lg shadow-lg w-full h-[380px] md:h-[460px] object-cover" />
             </div>
           </div>
         </div>

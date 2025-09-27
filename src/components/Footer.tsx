@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                 <Mail size={16} />
                 <a href="mailto:info@garoonthai.nz" className="hover:text-primary transition-colors">
-                  info@garoonthai.nz
+                  support@garoonthai.nz
                 </a>
               </div>
             </div>

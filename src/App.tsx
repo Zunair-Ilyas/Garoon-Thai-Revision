@@ -12,7 +12,6 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { AuthProvider } from "./context/AuthContext";
 import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import { ProtectedRoute } from "./routes/ProtectedRoute";
 
@@ -33,7 +32,6 @@ const App = () => (
             <Route path="/stores/asian-fusion" element={<AsianFusion />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
             <Route path="/dashboard" element={
               <ProtectedRoute>
                 <Dashboard />

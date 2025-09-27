@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, ExternalLink } from "lucide-react";
 import restaurantImage from "@/assets/restaurant-interior.jpg";
+import asianFusionImage from '../assets/Asian_Fusion_shopfront.jpg'
 
 const AsianFusion = () => {
   const address = "225 State Highway 2, Bethlehem, Tauranga 3110";
@@ -23,7 +24,8 @@ const AsianFusion = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-primary">Asian Fusion</h1>
               <p className="text-lg text-muted-foreground mb-6">
-                Contemporary Asian fusion in Bethlehem. This page redirects you to contact or navigate to the restaurant.
+                Asian Fusion is located next to Pizza Hut at the Bethlehem roundabout (opposite Countdown)
+                We offer great Thai food for home dining (either pick up or delivery) in the evenings 5 days per week (Weds - Sun)
               </p>
 
               <div className="space-y-3 mb-6">
@@ -43,7 +45,7 @@ const AsianFusion = () => {
             </div>
 
             <div className="animate-scale-in">
-              <img src={restaurantImage} alt="Asian Fusion interior" className="rounded-lg shadow-lg w-full h-[380px] md:h-[460px] object-cover" />
+              <img src={asianFusionImage} alt="Asian Fusion interior" className="rounded-lg shadow-lg w-full h-[380px] md:h-[460px] object-cover" />
             </div>
           </div>
         </div>

@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, ExternalLink, Clock, Car, Utensils } from "lucide-react";
-import restaurantImage from "@/assets/restaurant-interior.jpg";
+// import restaurantImage from "@/assets/restaurant-interior.jpg";
+import asianFusionImage from '../assets/Asian_Fusion_shopfront.jpg'
+import easyGoThaiImage from '../assets/EasyGoThai_Shopfront.jpg'
 
 const OurStores = () => {
   const stores = [
@@ -10,25 +12,29 @@ const OurStores = () => {
       id: "easy-go-thai",
       name: "Easy Go Thai",
       subtitle: "Mount Maunganui",
-      description: "Located in the heart of Mount Maunganui, Easy Go Thai offers authentic Thai cuisine in a relaxed beachside setting. Perfect for dine-in, takeaway, and delivery.",
+      description: "Easy Go Thai restaurant is located in the main area of Mount Maunganui and open 7 days a week from lunchtime to late. We are BYO and fully licensed and offer exceptional service and great Thai food for dine-in, takeaways , and delivery.",
       address: "277 Mount Maunganui Rd, Mount Maunganui, Tauranga 3116",
       phone: "(07) 574 8500",
       email: "manager@easygothai.nz",
       website: "easygothai.nz",
       services: ["Dine-in", "Takeaway", "Delivery"],
-      specialties: ["Traditional Pad Thai", "Fresh Seafood Curries", "Beachside Atmosphere"]
+      specialties: ["Traditional Pad Thai", "Fresh Seafood Curries", "Beachside Atmosphere"],
+      image: easyGoThaiImage
     },
     {
       id: "asian-fusion",
       name: "Asian Fusion", 
       subtitle: "Bethlehem",
-      description: "Our Bethlehem location combines traditional Thai flavors with modern Asian fusion concepts, creating unique dining experiences for adventurous food lovers.",
+      description: "Asian Fusion is located next to Pizza Hut at the Bethlehem roundabout (opposite Countdown)\n" +
+          "\n" +
+          "We offer great Thai food for home dining (either pick up or delivery) in the evenings 5 days per week (Weds - Sun)",
       address: "225 State Highway 2, Bethlehem, Tauranga 3110",
       phone: "022 402 6481", 
       email: "info@asianfusion.nz",
-      website: "easygothai.nz",
+      website: "asianfusion.nz",
       services: ["Dine-in", "Takeaway", "Catering"],
-      specialties: ["Fusion Creations", "Traditional Thai", "Modern Presentation"]
+      specialties: ["Fusion Creations", "Traditional Thai", "Modern Presentation"],
+      image: asianFusionImage
     }
   ];
 
@@ -111,20 +117,20 @@ const OurStores = () => {
                       {store.description}
                     </p>
 
-                    {/* Specialties */}
-                    <div className="mb-6">
-                      <h4 className="font-semibold mb-3">Specialties</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {store.specialties.map((specialty) => (
-                          <span 
-                            key={specialty}
-                            className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"
-                          >
-                            {specialty}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                    {/*/!* Specialties *!/*/}
+                    {/*<div className="mb-6">*/}
+                    {/*  <h4 className="font-semibold mb-3">Specialties</h4>*/}
+                    {/*  <div className="flex flex-wrap gap-2">*/}
+                    {/*    {store.specialties.map((specialty) => (*/}
+                    {/*      <span */}
+                    {/*        key={specialty}*/}
+                    {/*        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full"*/}
+                    {/*      >*/}
+                    {/*        {specialty}*/}
+                    {/*      </span>*/}
+                    {/*    ))}*/}
+                    {/*  </div>*/}
+                    {/*</div>*/}
 
                     {/* Services */}
                     <div className="mb-6">
@@ -171,7 +177,7 @@ const OurStores = () => {
                       </Link>
                       {store.website && (
                         <a 
-                          href={`https://easygothai.nz/`}
+                          href={`https://${store.website}`}
                           target="Easy Go Thai Website"
                           rel="noopener noreferrer"
                           className="btn-outline flex-1 text-center inline-flex items-center justify-center"
@@ -186,7 +192,7 @@ const OurStores = () => {
 
                 <div className={`animate-scale-in ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                   <img 
-                    src={restaurantImage} 
+                    src={store.image}
                     alt={`${store.name} restaurant interior`}
                     className="rounded-lg shadow-lg hover-lift w-full h-[400px] object-cover"
                   />

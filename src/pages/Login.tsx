@@ -3,6 +3,7 @@ import { useAuth } from "../context/AuthContext";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 const Login: React.FC = () => {
   const { login } = useAuth();
@@ -17,6 +18,18 @@ const Login: React.FC = () => {
     e.preventDefault();
     setError(null);
     setLoading(true);
+    // Check if user exists in allowed users table
+    const { data: allowedUser, error: userError } = await supabase
+      .from("users")
+      .select("email")
+      .eq("email", email)
+      .single();
+    if (!allowedUser) {
+      setError("You are not authorized to login.");
+      setLoading(false);
+      return;
+    }
+    // Proceed with authentication
     const { error } = await login(email, password);
     setLoading(false);
     if (error) {
