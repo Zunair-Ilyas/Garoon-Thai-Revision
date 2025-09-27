@@ -5,6 +5,7 @@ import { Heart, Users, Award, Utensils } from "lucide-react";
 // import ingredientsImage from "@/assets/thai-ingredients.jpg";
 import vision from '../assets/vision.jpg'
 import our_story from '../assets/our_story.jpg'
+import {Link} from "react-router-dom";
 
 const About = () => {
   const values = [
@@ -160,12 +161,12 @@ const About = () => {
             Taste the tradition, feel the warmth, and savour the flavour.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/our-stores" className="btn-secondary">
+            <Link to="/our-stores" className="btn-secondary">
               Find Our Locations
-            </a>
-            <a href="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-primary">
+            </Link>
+            <Link to="/contact" className="btn-outline border-white text-white hover:bg-white hover:text-primary">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
