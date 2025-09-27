@@ -223,16 +223,7 @@ const Contact = () => {
             <div className="bg-background rounded-lg p-6 shadow-lg">
               <h3 className="text-lg font-semibold mb-3 text-primary">Do you take reservations?</h3>
               <p className="text-muted-foreground">
-                Yes, we recommend calling either location directly to make reservations, 
-                especially for larger groups or during peak dining hours.
-              </p>
-            </div>
-
-            <div className="bg-background rounded-lg p-6 shadow-lg">
-              <h3 className="text-lg font-semibold mb-3 text-primary">Do you offer catering services?</h3>
-              <p className="text-muted-foreground">
-                Asian Fusion in Bethlehem offers catering services for events and special occasions. 
-                Contact them directly to discuss your catering needs.
+                Easy Go Thai offers dine-in and accepts reservations. Asian Fusion is takeaway only and does not offer dine-in or reservations.
               </p>
             </div>
 
