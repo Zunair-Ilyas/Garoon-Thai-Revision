@@ -84,7 +84,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="animate-fade-in-up">
+            {/* <div className="animate-fade-in-up">
               <h2 className="text-3xl font-serif font-bold mb-6 text-primary">
                 Send Us a Message
               </h2>
@@ -131,7 +131,7 @@ const Contact = () => {
                   {submitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
-            </div>
+            </div> */}
 
             {/* Contact Information */}
             <div className="animate-slide-in-right">
