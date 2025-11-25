@@ -139,70 +139,70 @@ const Home = () => {
             </section>
 
             {/* Newsletter & Contact */}
-            <section className="py-20 bg-card">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            Newsletter 
-            <div className="bg-background rounded-lg p-8 shadow-lg">
-                <h3 className="text-2xl font-serif font-bold mb-4 text-primary">Join Our Newsletter</h3>
-                <p className="text-muted-foreground mb-6">Stay updated with our latest news, menu updates, and special offers.</p>
-                <form onSubmit={handleSubscribe} className="flex gap-3">
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Enter your email"
-                        className="flex-1 form-input"
-                        required
-                    />
-                    <button className="btn-primary" disabled={subscribing}>
-                        {subscribing ? "Subscribing..." : "Subscribe"}
-                    </button>
-                </form>
-            </div>
-
-            {/* Quick Contact */}
-            <div className="bg-background rounded-lg p-8 shadow-lg">
-                <h3 className="text-2xl font-serif font-bold mb-4 text-primary">Quick Contact</h3>
-                <form onSubmit={handleContactSubmit} className="space-y-4">
-                    <input
-                        type="text"
-                        value={contactForm.name}
-                        onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                        placeholder="Your Name"
-                        className="form-input"
-                        required
-                    />
-                    <input
-                        type="email"
-                        value={contactForm.email}
-                        onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                        placeholder="Your Email"
-                        className="form-input"
-                        required
-                    />
-                    <input
-                        type="text"
-                        value={contactForm.subject}
-                        onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
-                        placeholder="Subject (optional)"
-                        className="form-input"
-                    />
-                    <textarea
-                        value={contactForm.message}
-                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                        placeholder="Your Message"
-                        className="form-textarea"
-                        required
-                    />
-                    <button className="btn-secondary" disabled={submitting}>
-                        {submitting ? "Sending..." : "Send"}
-                    </button>
-                </form>
-            </div>
-        </div>
-</div>
-</section> 
+            {/*<section className="py-20 bg-card">*/}
+            {/*    <div className="container mx-auto px-4">*/}
+            {/*        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">*/}
+            {/*            Newsletter*/}
+            {/*            <div className="bg-background rounded-lg p-8 shadow-lg">*/}
+            {/*                <h3 className="text-2xl font-serif font-bold mb-4 text-primary">Join Our Newsletter</h3>*/}
+            {/*                <p className="text-muted-foreground mb-6">Stay updated with our latest news, menu updates, and special offers.</p>*/}
+            {/*                <form onSubmit={handleSubscribe} className="flex gap-3">*/}
+            {/*                    <input*/}
+            {/*                        type="email"*/}
+            {/*                        value={email}*/}
+            {/*                        onChange={(e) => setEmail(e.target.value)}*/}
+            {/*                        placeholder="Enter your email"*/}
+            {/*                        className="flex-1 form-input"*/}
+            {/*                        required*/}
+            {/*                    />*/}
+            {/*                    <button className="btn-primary" disabled={subscribing}>*/}
+            {/*                        {subscribing ? "Subscribing..." : "Subscribe"}*/}
+            {/*                    </button>*/}
+            {/*                </form>*/}
+            {/*            </div>*/}
+            
+            {/*            /!* Quick Contact *!/*/}
+            {/*            <div className="bg-background rounded-lg p-8 shadow-lg">*/}
+            {/*                <h3 className="text-2xl font-serif font-bold mb-4 text-primary">Quick Contact</h3>*/}
+            {/*                <form onSubmit={handleContactSubmit} className="space-y-4">*/}
+            {/*                    <input*/}
+            {/*                        type="text"*/}
+            {/*                        value={contactForm.name}*/}
+            {/*                        onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}*/}
+            {/*                        placeholder="Your Name"*/}
+            {/*                        className="form-input"*/}
+            {/*                        required*/}
+            {/*                    />*/}
+            {/*                    <input*/}
+            {/*                        type="email"*/}
+            {/*                        value={contactForm.email}*/}
+            {/*                        onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}*/}
+            {/*                        placeholder="Your Email"*/}
+            {/*                        className="form-input"*/}
+            {/*                        required*/}
+            {/*                    />*/}
+            {/*                    <input*/}
+            {/*                        type="text"*/}
+            {/*                        value={contactForm.subject}*/}
+            {/*                        onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}*/}
+            {/*                        placeholder="Subject (optional)"*/}
+            {/*                        className="form-input"*/}
+            {/*                    />*/}
+            {/*                    <textarea*/}
+            {/*                        value={contactForm.message}*/}
+            {/*                        onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}*/}
+            {/*                        placeholder="Your Message"*/}
+            {/*                        className="form-textarea"*/}
+            {/*                        required*/}
+            {/*                    />*/}
+            {/*                    <button className="btn-secondary" disabled={submitting}>*/}
+            {/*                        {submitting ? "Sending..." : "Send"}*/}
+            {/*                    </button>*/}
+            {/*                </form>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
     {/* Locations */}
     <section className="py-20 bg-background">
